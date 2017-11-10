@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Draw2_project</title>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <style>
+      body{
+        background-color: black;
+      }
+      </style>
+    </head>
+    <body>
+      <center><h3 style="color:blue;">Project Page</h3></center><br>
+      <center><p><strong style="color:blue;">Select the options below.</strong></p></center>
+      <center><form action="/project" method="post">
+        <fieldset>
+
+
+            <select name="opt">
+                <option value="create">Create new Project</option>
+                <option value="join">Join an Existing Project</option>
+                <option value="resume">Resume existing project</option>
+              </select><br><br>
+
+              <label for="projectid" style="color:blue;">Projectid:</label>
+              <input type="text" name ="projectid" id="projectid" placeholder="Enter the project ID" />
+              <br>
+            <input type="submit" value="submit" />
+
+        </fieldset>
+    </form></center>
+  <button id="logout" class="btn btn-danger"><a href="/logout">Logout</a></button>
+
+    </body>
+  </html>
